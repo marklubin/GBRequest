@@ -4,7 +4,6 @@ GBRequest is a very simple wrapper for API calls to [Giant Bomb](giantbomb.com) 
 
 An example of usage:
 
-`
 GBRequest *request = [[GBRequest alloc]init];
 	NSArray *options = [NSArray arrayWithObject:@"genre=Action"];
     [request requestForEnitityName:@"games" withOptions:options debug:YES];
@@ -14,4 +13,3 @@ GBRequest *request = [[GBRequest alloc]init];
         NSLog(@"Game Title: %@", [result valueForKey:@"name"]);
     }
     results = [request nextPage]; // get the next page of 10
-`
