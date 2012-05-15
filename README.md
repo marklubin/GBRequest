@@ -5,13 +5,13 @@ An example of usage:
  `
  
     GBRequest *request = [[GBRequest alloc]init];  
-        NSArray *options = [NSArray arrayWithObject:@"genre=Action"];  
-        [request requestForEnitityName:@"games" withOptions:options debug:YES];  
-        request.resultsPerPage = 10; //API limit is 100  
-    	NSArray *results = [request requestResults];  
-    	for(NSDictionary *result in results){  
-        	NSLog(@"Game Title: %@", [result valueForKey:@"name"]);  
-    	}  
-    	results = [request nextPage]; // get the next page of 10  
+    NSArray *options = [NSArray arrayWithObject:@"genre=Action"];  
+    [request requestForEnitityName:@"games" withOptions:options debug:YES];  
+    request.resultsPerPage = 10; //API limit is 100  
+    NSArray *results = [request requestResults];  
+    for(NSDictionary *result in results){  
+        NSLog(@"Game Title: %@", [result valueForKey:@"name"]);  
+    }  
+    results = [request nextPage]; // get the next page of 10  
     	
 `
